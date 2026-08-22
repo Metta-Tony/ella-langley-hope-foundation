@@ -1,0 +1,7 @@
+{
+  "name": "Ella Langley Hope Foundation",
+  "description": "A modern, responsive donation landing page for Ella Langley Hope Foundation supporting community impact, transparency, and donation pledges via email.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

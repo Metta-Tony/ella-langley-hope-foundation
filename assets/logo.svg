@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%" fill="none">
+  <g fill="#491C63">
+    <!-- Heart Shell & Protective Hand Base -->
+    <path d="M100 178 C70 155 32 120 22 84 C14 54 28 24 58 20 C76 17 93 28 100 42 C107 28 124 17 142 20 C172 24 186 54 178 84 C168 120 130 155 100 178 Z" fill="#491C63" />
+    <!-- White Inner Cutout Shape forming the Heart Contour -->
+    <path d="M100 162 C74 142 42 110 34 80 C27 54 39 32 62 28 C78 26 92 35 98 48 C99 50 101 50 102 48 C108 35 122 26 138 28 C161 32 173 54 166 80 C158 110 126 142 100 162 Z" fill="#FFFFFF" />
+    <!-- Purple Figures: Parent (Adult) holding Child inside Heart -->
+    <!-- Adult Head -->
+    <circle cx="92" cy="62" r="10" fill="#491C63" />
+    <!-- Adult Torso / Crescent Embracing Arc -->
+    <path d="M72 108 C70 85 82 76 96 76 C88 88 88 102 96 112 C88 114 76 112 72 108 Z" fill="#491C63" />
+    <!-- Child Head -->
+    <circle cx="114" cy="80" r="7.5" fill="#491C63" />
+    <!-- Child Body / Embraced Arc -->
+    <path d="M104 91 C112 88 122 93 124 104 C116 108 107 104 104 91 Z" fill="#491C63" />
+    <!-- Base Cupped Caring Hand Cradle -->
+    <path d="M68 122 C84 136 116 138 136 118 C130 134 104 144 80 136 C74 133 70 128 68 122 Z" fill="#491C63" />
+  </g>
+</svg>
