@@ -55,8 +55,6 @@ export const DonationForm: React.FC = () => {
   // Adjusted proportionally per currency
   const getCurrencyRange = (code: string) => {
     switch (code) {
-      case 'NGN':
-        return { min: 3000000, max: 150000000, minDisplay: '₦3,000,000', maxDisplay: '₦150,000,000' };
       case 'EUR':
         return { min: 1850, max: 92000, minDisplay: '€1,850', maxDisplay: '€92,000' };
       case 'GBP':

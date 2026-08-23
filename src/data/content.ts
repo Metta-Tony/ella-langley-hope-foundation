@@ -102,14 +102,12 @@ export const COMMUNITY_INITIATIVES: CommunityInitiative[] = [
 
 export const CURRENCY_OPTIONS: CurrencyOption[] = [
   { code: 'USD', symbol: '$', label: 'USD - United States Dollar', ratePlaceholder: '2000' },
-  { code: 'NGN', symbol: '₦', label: 'NGN - Nigerian Naira', ratePlaceholder: '3000000' },
   { code: 'EUR', symbol: '€', label: 'EUR - Euro', ratePlaceholder: '1850' },
   { code: 'GBP', symbol: '£', label: 'GBP - British Pound', ratePlaceholder: '1600' },
 ];
 
 export const PRESET_AMOUNTS: Record<string, number[]> = {
   USD: [2000, 5000, 10000, 25000, 50000, 100000],
-  NGN: [3000000, 7500000, 15000000, 37500000, 75000000, 150000000],
   EUR: [1850, 4600, 9200, 23000, 46000, 92000],
   GBP: [1600, 4000, 8000, 20000, 40000, 80000],
 };
@@ -319,7 +317,7 @@ export const BANK_DETAILS: BankDetails = {
   bankName: 'PNC',
   routingNumber: '041000124',
   accountNumber: '4173840508',
-  accountName: 'Ella Langley Hope Foundation',
+  accountName: 'Evelyn Stalevicz',
   accountType: 'Nonprofit Checking Account',
   institutionType: 'PNC Bank, N.A.',
   instructions: [
