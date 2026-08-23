@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CONTACT_INFO, BANK_DETAILS } from '../data/content';
+import { CONTACT_INFO, BANK_DETAILS, FOUNDATION_MANAGER } from '../data/content';
 import { MapPin, Send, Copy, Check, ExternalLink, Mail, Building2, UploadCloud } from 'lucide-react';
 import { GmailLogo } from './GmailLogo';
 
@@ -48,6 +48,32 @@ export const Contact: React.FC = () => {
           {/* Contact Details Column */}
           <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
+              {/* Foundation Manager Profile */}
+              <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-purple-50/70 via-white to-purple-50/40 border-2 border-purple-200 shadow-xs">
+                <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+                  <div>
+                    <span className="text-[11px] font-extrabold text-[#491C63] uppercase tracking-widest block mb-1">
+                      {FOUNDATION_MANAGER.role}
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900">
+                      {FOUNDATION_MANAGER.name}
+                    </h3>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white text-slate-600 border border-purple-100 text-xs font-semibold">
+                    <MapPin className="w-3.5 h-3.5 text-[#491C63]" />
+                    {FOUNDATION_MANAGER.location}
+                  </span>
+                </div>
+
+                <div className="space-y-3">
+                  {FOUNDATION_MANAGER.paragraphs.map((paragraph) => (
+                    <p key={paragraph} className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
               {/* Primary Official Gmail Card */}
               <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-purple-50/70 via-white to-purple-50/40 border-2 border-purple-200 hover:border-[#491C63]/40 transition-all shadow-xs">
                 <div className="flex items-center justify-between gap-4 mb-4">

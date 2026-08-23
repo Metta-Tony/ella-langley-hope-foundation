@@ -205,6 +205,16 @@ export const FOUNDATION_STORY = {
   },
 };
 
+export const FOUNDATION_MANAGER = {
+  name: 'Evelyn Stalevicz',
+  role: 'Foundation Manager',
+  location: 'Ohio, USA',
+  paragraphs: [
+    'Based in Ohio, Evelyn Stalevicz serves as the dedicated Manager of the Ella Langley Hope Foundation (ELHF). Through her leadership, commitment, and passion for service, Evelyn has played a significant role in expanding the foundation\'s reach and strengthening its impact within communities.',
+    'Her efforts in coordinating initiatives, building meaningful connections, and supporting the foundation\'s mission have contributed greatly to ELHF\'s continued growth and success. Evelyn\'s dedication reflects the heart of the foundation, bringing hope, compassion, and opportunities to those who need them most.',
+  ],
+};
+
 export const ABOUT_FEATURES: FeatureCard[] = [
   {
     id: 'transparency',
