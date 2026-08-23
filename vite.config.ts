@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/ella-langley-hope-foundation/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
