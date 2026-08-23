@@ -342,7 +342,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: 'faq-3',
     question: 'What currencies can I pledge in?',
-    answer: 'We accept pledges in US Dollars (USD), Nigerian Naira (NGN), Euros (EUR), and British Pounds (GBP). If you require a different regional currency, simply specify it in your donation note.',
+    answer: 'We accept pledges in US Dollars (USD), Euros (EUR), and British Pounds (GBP). If you require a different regional currency, simply specify it in your donation note.',
     category: 'Payments',
   },
   {
