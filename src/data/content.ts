@@ -1,4 +1,4 @@
-import { CurrencyOption, DonationPurpose, ImpactStat, Testimonial, FAQItem, FeatureCard, BankDetails } from '../types';
+import { CurrencyOption, DonationPurpose, ImpactStat, Testimonial, FAQItem, FeatureCard } from '../types';
 import ellaOne from '../../images/Ella 1.jpeg';
 import ellaTwo from '../../images/Ella2.jpeg';
 import ellaThree from '../../images/Ella3.jpeg';
@@ -203,16 +203,6 @@ export const FOUNDATION_STORY = {
   },
 };
 
-export const FOUNDATION_MANAGER = {
-  name: 'Evelyn Stalevicz',
-  role: 'Foundation Manager',
-  location: 'Ohio, USA',
-  paragraphs: [
-    'Based in Ohio, Evelyn Stalevicz serves as the dedicated Manager of the Ella Langley Hope Foundation (ELHF). Through her leadership, commitment, and passion for service, Evelyn has played a significant role in expanding the foundation\'s reach and strengthening its impact within communities.',
-    'Her efforts in coordinating initiatives, building meaningful connections, and supporting the foundation\'s mission have contributed greatly to ELHF\'s continued growth and success. Evelyn\'s dedication reflects the heart of the foundation, bringing hope, compassion, and opportunities to those who need them most.',
-  ],
-};
-
 export const ABOUT_FEATURES: FeatureCard[] = [
   {
     id: 'transparency',
@@ -313,28 +303,7 @@ export const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
-export const BANK_DETAILS: BankDetails = {
-  bankName: 'PNC',
-  routingNumber: '041000124',
-  accountNumber: '4173840508',
-  accountName: 'Evelyn Stalevicz',
-  accountType: 'Nonprofit Checking Account',
-  institutionType: 'PNC Bank, N.A.',
-  instructions: [
-    'Log in to your mobile or online banking portal (or visit any bank branch).',
-    'Initiate a transfer or wire using the PNC routing and account numbers above.',
-    'Capture a screenshot or PDF of your transaction confirmation receipt.',
-    'Upload your screenshot using our deposit receiver to get an instant verified acknowledgment and official tax receipt.',
-  ],
-};
-
 export const FAQ_ITEMS: FAQItem[] = [
-  {
-    id: 'faq-direct-bank',
-    question: 'How do I make a quick direct bank donation?',
-    answer: 'You can transfer funds directly to our PNC account (Routing: 041000124, Account: 4173840508, Beneficiary: Ella Langley Hope Foundation) via your online banking app, ACH, wire, or branch deposit. Once transferred, simply upload your deposit screenshot in our deposit receiver to receive an immediate tax acknowledgment.',
-    category: 'Bank Transfer',
-  },
   {
     id: 'faq-1',
     question: 'How does donating via email work?',
@@ -344,7 +313,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: 'faq-2',
     question: 'Are pledges and bank donations tax-deductible?',
-    answer: 'Yes! The Ella Langley Hope Foundation is a recognized philanthropic nonprofit initiative. Once your email pledge or deposit screenshot is received, our donations coordinator will issue an official tax acknowledgment receipt for your records.',
+    answer: 'Yes! The Ella Langley Hope Foundation is a recognized philanthropic nonprofit initiative. Once your email pledge is received, our donations coordinator will issue an official tax acknowledgment receipt for your records.',
     category: 'Tax & Receipts',
   },
   {
@@ -364,12 +333,6 @@ export const FAQ_ITEMS: FAQItem[] = [
     question: 'Can I dedicate my donation in honor or memory of someone?',
     answer: 'Absolutely. Use the "Message / Note" field in the donation form to include the name of the person you are honoring and any special message you would like included in our acknowledgment registry.',
     category: 'Dedications',
-  },
-  {
-    id: 'faq-6',
-    question: 'How quickly does the Foundation team follow up on deposit screenshots?',
-    answer: 'Our donor care coordinators review all incoming deposit confirmations within 12 to 24 business hours to verify the transfer, issue an official stamped tax receipt, and credit your contribution to the designated fund.',
-    category: 'Support',
   },
 ];
 

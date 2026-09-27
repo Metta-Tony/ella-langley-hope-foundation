@@ -7,16 +7,6 @@ export interface CurrencyOption {
   ratePlaceholder: string;
 }
 
-export interface BankDetails {
-  bankName: string;
-  routingNumber: string;
-  accountNumber: string;
-  accountName: string;
-  accountType: string;
-  institutionType?: string;
-  instructions: string[];
-}
-
 export interface DonationPurpose {
   id: string;
   name: string;
@@ -34,20 +24,6 @@ export interface DonationFormData {
   message: string;
 }
 
-export interface DepositProofData {
-  donorName: string;
-  email: string;
-  amountDeposited: string;
-  currency: CurrencyCode;
-  transactionReference: string;
-  dateOfTransfer: string;
-  purpose: string;
-  notes: string;
-  screenshotFile: File | null;
-  screenshotPreviewUrl: string | null;
-  screenshotFileName: string;
-  screenshotFileSize: string;
-}
 
 export interface ImpactStat {
   id: string;

@@ -4,7 +4,6 @@ import {
   PRESET_AMOUNTS,
   DONATION_PURPOSES,
   CONTACT_INFO,
-  BANK_DETAILS,
 } from '../data/content';
 import { CurrencyCode, DonationFormData } from '../types';
 import {
@@ -17,19 +16,12 @@ import {
   ShieldCheck,
   CheckCircle2,
   Sparkles,
-  Building2,
-  UploadCloud,
   Check,
-  Copy,
 } from 'lucide-react';
 import { PledgeSuccessModal } from './PledgeSuccessModal';
 import { GmailLogo } from './GmailLogo';
-import { DepositScreenshotReceiver } from './DepositScreenshotReceiver';
 
 export const DonationForm: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'direct_bank' | 'email_pledge'>('direct_bank');
-  const [copiedBankInfo, setCopiedBankInfo] = useState(false);
-
   const [formData, setFormData] = useState<DonationFormData>({
     fullName: '',
     email: '',
@@ -156,9 +148,6 @@ export const DonationForm: React.FC = () => {
       `• Donation Purpose: ${formData.purpose}`,
       `• Pledge Timestamp: ${formattedDate}`,
       ``,
-      `Bank Transfer Reference:`,
-      `• Bank: ${BANK_DETAILS.bankName} (Routing: ${BANK_DETAILS.routingNumber} / Account: ${BANK_DETAILS.accountNumber})`,
-      ``,
       `Personal Message / Dedication:`,
       `${formData.message.trim() || 'No additional note provided.'}`,
       ``,
@@ -201,54 +190,11 @@ export const DonationForm: React.FC = () => {
             Quick Donations & Pledges
           </h2>
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto font-normal">
-            Choose your preferred donation method below: make a direct transfer to our <strong>PNC Bank account</strong> (minimum of $2,000 – $100,000) and upload your confirmation screenshot, or submit an <strong>email pledge</strong>.
+            Submit an <strong>email pledge</strong> to support the Ella Langley Hope Foundation.
           </p>
         </div>
 
-        {/* Donation Method Selector Tabs */}
-        <div className="max-w-xl mx-auto mb-10 p-1.5 bg-purple-100/70 border border-purple-200 rounded-2xl flex items-center gap-2">
-          <button
-            id="tab-direct-bank"
-            type="button"
-            onClick={() => setActiveTab('direct_bank')}
-            className={`flex-1 py-3 px-3.5 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-2 cursor-pointer ${
-              activeTab === 'direct_bank'
-                ? 'bg-[#491C63] text-white shadow-md'
-                : 'text-slate-700 hover:text-[#491C63] hover:bg-white/60'
-            }`}
-          >
-            <Building2 className="w-4 h-4 shrink-0" />
-            <div className="flex flex-col sm:flex-row items-center sm:gap-1.5 leading-tight">
-              <span>Quick PNC Bank Transfer</span>
-              <span className={`text-[10px] px-1.5 py-0.2 rounded font-extrabold ${activeTab === 'direct_bank' ? 'bg-amber-400 text-slate-900' : 'bg-purple-200 text-purple-900'}`}>
-                $2k–$100k
-              </span>
-            </div>
-          </button>
-
-          <button
-            id="tab-email-pledge"
-            type="button"
-            onClick={() => setActiveTab('email_pledge')}
-            className={`flex-1 py-3 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-2 cursor-pointer ${
-              activeTab === 'email_pledge'
-                ? 'bg-[#491C63] text-white shadow-md'
-                : 'text-slate-700 hover:text-[#491C63] hover:bg-white/60'
-            }`}
-          >
-            <Mail className="w-4 h-4" />
-            <span>Email Pledge Form</span>
-          </button>
-        </div>
-
-        {/* Conditional Rendering of Selected Method */}
-        {activeTab === 'direct_bank' ? (
-          <div className="max-w-4xl mx-auto">
-            <DepositScreenshotReceiver onSwitchToPledge={() => setActiveTab('email_pledge')} />
-          </div>
-        ) : (
-          /* Form Container for Email Pledge */
-          <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto">
             {submitStatusMessage && (
               <div
                 id="submission-status-banner"
@@ -266,23 +212,6 @@ export const DonationForm: React.FC = () => {
                 </button>
               </div>
             )}
-
-            {/* Quick Bank Banner within Pledge Mode */}
-            <div className="mb-6 bg-purple-50 rounded-2xl p-4 border border-purple-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
-              <div className="flex items-center gap-2.5">
-                <Building2 className="w-4 h-4 text-[#491C63] shrink-0" />
-                <span className="text-slate-700">
-                  Prefer direct deposit right away? Transfer to <strong>PNC Bank</strong> (Routing: <code className="font-mono bg-white px-1.5 py-0.5 rounded border border-purple-200 text-[#491C63]">{BANK_DETAILS.routingNumber}</code>, Account: <code className="font-mono bg-white px-1.5 py-0.5 rounded border border-purple-200 text-[#491C63]">{BANK_DETAILS.accountNumber}</code>).
-                </span>
-              </div>
-              <button
-                type="button"
-                onClick={() => setActiveTab('direct_bank')}
-                className="text-[#491C63] font-bold underline hover:text-[#3B1352] shrink-0 cursor-pointer"
-              >
-                Go to Screenshot Upload →
-              </button>
-            </div>
 
             <div className="bg-white rounded-3xl border border-purple-100 shadow-2xl overflow-hidden">
               {/* Top form banner */}
@@ -567,7 +496,6 @@ export const DonationForm: React.FC = () => {
               </form>
             </div>
           </div>
-        )}
       </div>
 
       {/* Success / Fallback Modal */}
