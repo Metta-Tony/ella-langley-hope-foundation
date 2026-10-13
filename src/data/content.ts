@@ -344,3 +344,11 @@ export const CONTACT_INFO = {
   cityStateZip: 'Hope Hull, AL 36043 / Nashville, TN',
   hours: 'Monday – Friday: 8:00 AM – 6:00 PM CST',
 };
+
+export const ACCOUNT_INFO = {
+  number: '1234567890',
+  routingNumber: '021000021',
+  accountType: 'Checking',
+  bankName: 'NorthStar Community Bank',
+  beneficiary: 'Ella Langley Hope Foundation',
+};

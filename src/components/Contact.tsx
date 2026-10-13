@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { CONTACT_INFO } from '../data/content';
-import { MapPin, Send, Copy, Check, ExternalLink, Mail } from 'lucide-react';
+import { ACCOUNT_INFO, CONTACT_INFO } from '../data/content';
+import { MapPin, Send, Copy, Check, ExternalLink, Mail, Landmark } from 'lucide-react';
 import { GmailLogo } from './GmailLogo';
 
 export const Contact: React.FC = () => {
@@ -129,6 +129,31 @@ export const Contact: React.FC = () => {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div id="account-section" className="p-5 rounded-3xl bg-slate-900 text-white shadow-md">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
+                  <Landmark className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold">Account Details</h4>
+                </div>
+              </div>
+              <div className="space-y-2 text-sm text-slate-200">
+                <p>
+                  <span className="font-semibold text-white">Account Number:</span> {ACCOUNT_INFO.number}
+                </p>
+                <p>
+                  <span className="font-semibold text-white">Bank:</span> {ACCOUNT_INFO.bankName}
+                </p>
+                <p>
+                  <span className="font-semibold text-white">Account Type:</span> {ACCOUNT_INFO.accountType}
+                </p>
+                <p>
+                  <span className="font-semibold text-white">Routing Number:</span> {ACCOUNT_INFO.routingNumber}
+                </p>
               </div>
             </div>
 
